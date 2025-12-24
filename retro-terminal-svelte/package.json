@@ -20,5 +20,8 @@
 		"tailwindcss": "^4.1.17",
 		"vite": "^7.2.6",
 		"vite-plugin-devtools-json": "^1.0.0"
+	},
+	"dependencies": {
+		"@xterm/xterm": "^6.0.0"
 	}
 }

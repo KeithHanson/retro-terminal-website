@@ -1,17 +1,21 @@
 <script>
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
-  <link rel="icon" href={favicon} />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css" />
+
   <style>
       * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+      }
+
+      html {
+        height: 100%;
       }
 
       body {
@@ -22,6 +26,7 @@
           min-height: 100vh;
           font-family: 'Courier New', monospace;
           padding: 20px;
+          height: 100%;
       }
 
       .monitor {
@@ -35,8 +40,8 @@
               inset 3px 0 8px rgba(0, 0, 0, 0.15),
               inset -3px 0 8px rgba(0, 0, 0, 0.15);
           position: relative;
-          max-width: 900px;
           width: 100%;
+          height: 100%;
       }
 
       .monitor::before {
@@ -76,6 +81,7 @@
           background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
           border-radius: 2px;
           padding: 25px;
+          height: 100%;
           box-shadow: 
               inset 0 4px 12px rgba(0, 0, 0, 0.9),
               inset 0 0 0 2px #3a3a3a,
@@ -88,7 +94,8 @@
           background: #000a00;
           border-radius: 0;
           padding: 20px;
-          min-height: 400px;
+          min-height: 800px;
+          height: 100%;
           position: relative;
           overflow: hidden;
           box-shadow: 
